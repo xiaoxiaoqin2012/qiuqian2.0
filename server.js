@@ -3,7 +3,12 @@ const cors = require('cors');
 const fetch = require('node-fetch');
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    // 替换 your-github-pages-url 为您的 GitHub Pages 实际地址
+    origin: ['https://xiaoxiaoqin.github.io', 'http://localhost:3000'],
+    methods: ['GET', 'POST'],
+    credentials: true
+}));
 app.use(express.json());
 app.use(express.static('public')); // 用于托管静态文件
 
