@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.textContent = '求签中...';
 
         try {
-            const response = await fetch('https://qiuqian2.vercel.app/api/fortune', {                
+            const response = await fetch('qiuqian2.vercel.app', {                
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
